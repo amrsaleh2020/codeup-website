@@ -5,89 +5,124 @@
     <title>CodeUp Solutions</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, Tahoma;
-            background: #f4f6f9;
-            color: #333;
-            direction: rtl;
-            text-align: center;
-        }
-        header {
-            background: #4f46e5;
-            color: white;
-            padding: 40px 20px;
-        }
-        section {
-            padding: 30px 20px;
-        }
-        .box {
-            background: white;
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        button {
-            background: #0d6efd;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 6px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        footer {
-            background: #222;
-            color: #aaa;
-            padding: 15px;
-            font-size: 14px;
-        }
-    </style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
+:root {
+    --main-color: #4f46e5;
+    --secondary-color: #0d6efd;
+    --bg-color: #f8fafc;
+    --text-color: #1f2937;
+}
+
+body {
+    margin: 0;
+    font-family: 'Cairo', sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    direction: rtl;
+    text-align: center;
+}
+
+header {
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
+    color: white;
+    padding: 60px 20px;
+}
+
+header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+    opacity: 0.95;
+}
+
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+button {
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+footer {
+    background: #111827;
+    color: #9ca3af;
+    padding: 20px;
+    font-size: 14px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
     <h1>CodeUp Solutions</h1>
-    <p>تعليم البرمجة للأطفال والمبتدئين</p>
-    <p>Mobile & Web Development</p>
+    <p>منصة تعليم البرمجة للأطفال والمبتدئين</p>
+    <p>Web & Mobile Development</p>
+
+    <a href="projects.html">
+        <button>استكشف المشاريع</button>
+    </a>
 </header>
 
-<section class="box">
-    <h2>إحنا مين؟</h2>
-    <p>
-        CodeUp Solutions منصة تعليمية بتقدّم شرح برمجة بسيط،
-        خطوة بخطوة، مع تطبيق عملي ومشاريع حقيقية تناسب الأطفال
-        والمبتدئين.
-    </p>
+<section class="section">
+    <h2>لماذا CodeUp؟</h2>
+    <div class="cards">
+        <div class="card">👶 مناسب للأطفال</div>
+        <div class="card">🧩 شرح مبسّط خطوة بخطوة</div>
+        <div class="card">💻 مشاريع حقيقية</div>
+        <div class="card">🌍 معايير تعليم عالمية</div>
+    </div>
 </section>
 
-<section class="box">
-    <h2>هنقدّم إيه؟</h2>
-    <p>✔ شرح مبسّط</p>
-    <p>✔ تطبيق عملي</p>
-    <p>✔ مشاريع صغيرة وممتعة</p>
-    <p>✔ موبايل وويب</p>
-</section>
+<section class="section">
+    <h2>ماذا نُعلّم؟</h2>
+    <div class="cards">
+        <div class="card">🎮 برمجة الأطفال</div>
+        <div class="card">🌐 Web Development</div>
+        <div class="card">📱 Mobile Apps</div>
+        <div class="card">🧠 التفكير المنطقي</div>
+    </div>
 
-<section class="box">
-    <h2>جاهز تبدأ؟</h2>
-    <p>سيب رسالة وهنرد عليك فورًا</p>
-    <a href="https://wa.me/201060209332" target="_blank">
-    <button>تواصل معنا على واتساب</button>
-    <br><br>
-<a href="projects.html">
-    <button>شوف مشاريعنا</button>
-</a>
-
-</a>
+    <a href="https://wa.me/201XXXXXXXXX" target="_blank">
+        <button>تواصل معنا</button>
+    </a>
 </section>
 
 <footer>
-    © 2026 CodeUp Solutions
+    © 2026 CodeUp Solutions — Learn. Build. Create.
 </footer>
+
 
 </body>
 </html>
