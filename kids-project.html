@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>مشروع الأطفال - CodeUp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, Tahoma;
+            text-align: center;
+            background: #f4f6f9;
+            direction: rtl;
+            padding: 40px 20px;
+        }
+        h1 {
+            color: #4f46e5;
+        }
+        button {
+            background: #0d6efd;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>🎉 أول مشروع برمجة للأطفال</h1>
+<p>اضغط على الزر وشوف إيه اللي هيحصل 👇</p>
+
+<button onclick="changeColor()">اضغط هنا</button>
+
+<script>
+function changeColor() {
+    const colors = ["#fde68a", "#bfdbfe", "#bbf7d0", "#fecaca", "#ddd6fe"];
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    document.body.style.background = randomColor;
+}
+</script>
+
+</body>
+</html>
