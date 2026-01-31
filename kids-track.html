@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>مسار الأطفال - CodeUp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Cairo', sans-serif;
+            background: #f8fafc;
+            direction: rtl;
+            text-align: center;
+            color: #1f2937;
+        }
+
+        header {
+            background: linear-gradient(135deg, #4f46e5, #6366f1);
+            color: white;
+            padding: 60px 20px;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            color: #4f46e5;
+        }
+
+        button {
+            background: #0d6efd;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 25px;
+        }
+
+        footer {
+            background: #111827;
+            color: #9ca3af;
+            padding: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🧒 مسار الأطفال</h1>
+    <p>تعليم البرمجة للأطفال بطريقة ممتعة وبسيطة</p>
+</header>
+
+<section>
+    <h2>ماذا سيتعلم طفلك؟</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>🎯 المرحلة الأولى</h3>
+            <p>التعرف على البرمجة والتفكير المنطقي</p>
+        </div>
+
+        <div class="card">
+            <h3>🎨 المرحلة الثانية</h3>
+            <p>مشاريع تفاعلية وألعاب بسيطة</p>
+        </div>
+
+        <div class="card">
+            <h3>💻 المرحلة الثالثة</h3>
+            <p>تصميم صفحات ويب ولعب تعليمية</p>
+        </div>
+
+        <div class="card">
+            <h3>🏆 المرحلة الرابعة</h3>
+            <p>مشروع نهائي + شهادة مشاركة</p>
+        </div>
+    </div>
+
+    <a href="lesson1.html">
+        <button>ابدأ أول درس</button>
+    </a>
+</section>
+
+<footer>
+    © 2026 CodeUp Solutions
+</footer>
+
+</body>
+</html>
