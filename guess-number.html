@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>لعبة احزر الرقم - CodeUp Kids</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Cairo', sans-serif;
+            background: #f8fafc;
+            direction: rtl;
+            text-align: center;
+            color: #1f2937;
+            padding: 40px 20px;
+        }
+
+        .box {
+            background: white;
+            max-width: 500px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #4f46e5;
+        }
+
+        input {
+            width: 80%;
+            padding: 12px;
+            margin: 15px 0;
+            font-size: 18px;
+            border-radius: 10px;
+            border: 1px solid #d1d5db;
+            text-align: center;
+        }
+
+        button {
+            background: #0d6efd;
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>🎯 لعبة احزر الرقم</h1>
+    <p>أنا مفكّر في رقم من 1 لـ 10 🤔</p>
+    <p>جرب تخمّن!</p>
+
+    <input type="number" id="guess" placeholder="اكتب رقم">
+    <br>
+    <button onclick="checkGuess()">جرّب</button>
+
+    <div class="message" id="message"></div>
+</div>
+
+<script>
+    const secretNumber = Math.floor(Math.random() * 10) + 1;
+
+    function checkGuess() {
+        const userGuess = Number(document.getElementById("guess").value);
+        const message = document.getElementById("message");
+
+        if (!userGuess) {
+            message.innerHTML = "❗ من فضلك اكتب رقم";
+        } else if (userGuess > secretNumber) {
+            message.innerHTML = "🔽 الرقم أصغر";
+        } else if (userGuess < secretNumber) {
+            message.innerHTML = "🔼 الرقم أكبر";
+        } else {
+            message.innerHTML = "🎉 برافو عليك! خمنت صح";
+        }
+    }
+</script>
+
+</body>
+</html>

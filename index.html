@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>CodeUp Solutions</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
 
@@ -13,6 +14,10 @@
     --bg-color: #f8fafc;
     --text-color: #1f2937;
 }
+.section a button {
+    margin-top: 30px;
+}
+
 
 body {
     margin: 0;
@@ -20,67 +25,9 @@ body {
     background: var(--bg-color);
     color: var(--text-color);
     direction: rtl;
-    text-align: center;
 }
 
-header {
-    background: linear-gradient(135deg, #4f46e5, #6366f1);
-    color: white;
-    padding: 60px 20px;
-}
-
-header h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
-}
-
-header p {
-    font-size: 18px;
-    opacity: 0.95;
-}
-
-.section {
-    max-width: 1100px;
-    margin: auto;
-    padding: 50px 20px;
-    
-}
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.card {
-    background: white;
-    padding: 25px;
-    border-radius: 14px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-button {
-    background: var(--secondary-color);
-    color: white;
-    border: none;
-    padding: 14px 30px;
-    border-radius: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-footer {
-    background: #111827;
-    color: #9ca3af;
-    padding: 20px;
-    font-size: 14px;
-}
+/* Navbar */
 .navbar {
     position: sticky;
     top: 0;
@@ -111,25 +58,122 @@ footer {
     color: #1f2937;
     font-weight: 600;
 }
-.fade-up {
-    animation: fadeUp 0.8s ease;
+
+/* Hero */
+.hero {
+    min-height: 100vh; /* يملى ارتفاع الشاشة */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    color: white;
+    flex-wrap: wrap;
+
+    background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("hero-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+.hero-text {
+    max-width: 500px;
+    animation: slideIn 1s ease;
+}
+
+.hero-img img {
+    width: 350px;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Buttons */
+.btn, button {
+    background: #facc15;
+    color: #111;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Sections */
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    animation: fadeUp 0.6s ease;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+/* Animations */
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
 }
 
 @keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer */
+footer {
+    background: #111827;
+    color: #9ca3af;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    .hero-img img {
+        width: 260px;
+        margin-top: 30px;
     }
 }
-</style>
+
+    </style>
 </head>
 
 <body>
-    <nav class="navbar">
+
+<!-- Navbar -->
+<nav class="navbar">
     <div class="logo">CodeUp</div>
     <ul>
         <li><a href="index.html">الرئيسية</a></li>
@@ -139,35 +183,50 @@ footer {
     </ul>
 </nav>
 
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>خلّي طفلك يحب البرمجة ❤️</h1>
+        <p>تعليم البرمجة للأطفال بطريقة لعب ومشاريع ممتعة</p>
+        <a href="projects.html" class="btn">ابدأ الرحلة 🚀</a>
+    </div>
+
+    <div class="hero-img">
+        <img src="kids-coding.png" alt="Kids Coding">
+    </div>
+</section>
+
+<!-- Why CodeUp -->
+<section class="section">
+    <h2>لماذا CodeUp؟</h2>
+    <div class="cards">
+        <div class="card">👶 مناسب للأطفال</div>
+        <div class="card">🧩 شرح مبسّط خطوة بخطوة</div>
+        <div class="card">💻 مشاريع حقيقية</div>
+        <div class="card">🌍 معايير تعليم عالمية</div>
+    </div>
+</section>
+
+<!-- What We Teach -->
+<section class="section">
+    <h2>ماذا نُعلّم؟</h2>
+    <div class="cards">
+        <div class="card">🎮 برمجة الأطفال</div>
+        <div class="card">🌐 Web Development</div>
+        <div class="card">📱 Mobile Apps</div>
+        <div class="card">🧠 التفكير المنطقي</div>
+    </div>
+
     
-<header>
-    <h1>CodeUp Solutions</h1>
-    <p>منصة تعليم البرمجة للأطفال والمبتدئين</p>
-    <p>Web & Mobile Development</p>
+</section>
 
-    <a href="projects.html">
-        <button>استكشف المشاريع</button>
-    </a>
-    <a href="kids-track.html">
-    <button>مسار الأطفال</button>
-    </a>
-</header>
-<header class="fade-up">
-    <h1>علّم ابنك البرمجة بطريقة ممتعة</h1>
-    <p>منصة تعليمية للأطفال والمبتدئين</p>
-
-    <a href="kids-track.html">
-        <button>ابدأ الآن</button>
-    </a>
-</header>
-
+<!-- Testimonials -->
 <section class="section">
     <h2>آراء أولياء الأمور</h2>
-
     <div class="cards">
         <div class="card">
             ⭐⭐⭐⭐⭐
-            <p>ابني حب البرمجة جدًا وطريقة الشرح بسيطة وممتعة.</p>
+            <p>ابني حب البرمجة جدًا وطريقة الشرح بسيطة.</p>
             <strong>— ولي أمر</strong>
         </div>
 
@@ -177,39 +236,25 @@ footer {
             <strong>— أم طفل 9 سنوات</strong>
         </div>
     </div>
-</section>
-
-
-<section class="section">
-    <h2>لماذا CodeUp؟</h2>
-    <div class="cards">
-        
-        <div class="card">👶 مناسب للأطفال</div>
-        <div class="card">🧩 شرح مبسّط خطوة بخطوة</div>
-        <div class="card">💻 مشاريع حقيقية</div>
-        <div class="card">🌍 معايير تعليم عالمية</div>
-    </div>
-</section>
-
-<section class="section">
-    <h2>ماذا نُعلّم؟</h2>
-    <div class="cards">
-        <div class="card">🎮 برمجة الأطفال</div>
-        <div class="card">🌐 Web Development</div>
-        <div class="card">📱 Mobile Apps</div>
-        <div class="card">🧠 التفكير المنطقي</div>
-        <section class="section fade-up">
-    </div>
-
-    <a href="https://wa.me/201XXXXXXXXX" target="_blank">
+    
+    <div>
+        <section>
+        <a href="https://wa.me/201060209332" target="_blank">
         <button>تواصل معنا</button>
     </a>
+
+    </section>
+
+    </div>
+    
 </section>
 
+
+
+<!-- Footer -->
 <footer>
     © 2026 CodeUp Solutions — Learn. Build. Create.
 </footer>
-
 
 </body>
 </html>
