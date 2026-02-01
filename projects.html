@@ -5,6 +5,14 @@
     <title>مشاريع CodeUp</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        :root {
+    --main-color: #4f46e5;     /* Indigo */
+    --secondary-color: #0d6efd;
+    --accent-color: #22c55e;   /* Kids friendly */
+    --bg-color: #f8fafc;
+    --text-color: #1f2937;
+}
+
         body {
             margin: 0;
             font-family: Arial, Tahoma;
@@ -40,11 +48,65 @@
             padding: 15px;
             font-size: 14px;
         }
+        .navbar {
+    position: sticky;
+    top: 0;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--main-color);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #1f2937;
+    font-weight: 600;
+}
+.fade-up {
+    animation: fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
     </style>
 </head>
 
 <body>
-
+    
+<nav class="navbar">
+    <div class="logo">CodeUp</div>
+    <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="kids-track.html">مسار الأطفال</a></li>
+        <li><a href="projects.html">المشاريع</a></li>
+        <li><a href="register.html">التسجيل</a></li>
+    </ul>
+</nav>
 <header>
     <h1>مشاريع CodeUp Solutions</h1>
     <p>نماذج لمشاريع تعليمية بسيطة</p>
@@ -55,6 +117,8 @@
     <p>مشروع لتعليم التفكير المنطقي باستخدام البرمجة البسيطة.</p>
     <a href="kids-project.html">جرب المشروع</a>
 </div>
+<section class="section fade-up">
+    
 
 <div class="project">
     <h2>🌐 صفحة ويب شخصية</h2>

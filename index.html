@@ -43,6 +43,7 @@ header p {
     max-width: 1100px;
     margin: auto;
     padding: 50px 20px;
+    
 }
 
 .cards {
@@ -80,11 +81,65 @@ footer {
     padding: 20px;
     font-size: 14px;
 }
+.navbar {
+    position: sticky;
+    top: 0;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--main-color);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #1f2937;
+    font-weight: 600;
+}
+.fade-up {
+    animation: fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 </style>
 </head>
 
 <body>
+    <nav class="navbar">
+    <div class="logo">CodeUp</div>
+    <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="kids-track.html">مسار الأطفال</a></li>
+        <li><a href="projects.html">المشاريع</a></li>
+        <li><a href="register.html">التسجيل</a></li>
+    </ul>
+</nav>
 
+    
 <header>
     <h1>CodeUp Solutions</h1>
     <p>منصة تعليم البرمجة للأطفال والمبتدئين</p>
@@ -97,6 +152,33 @@ footer {
     <button>مسار الأطفال</button>
     </a>
 </header>
+<header class="fade-up">
+    <h1>علّم ابنك البرمجة بطريقة ممتعة</h1>
+    <p>منصة تعليمية للأطفال والمبتدئين</p>
+
+    <a href="kids-track.html">
+        <button>ابدأ الآن</button>
+    </a>
+</header>
+
+<section class="section">
+    <h2>آراء أولياء الأمور</h2>
+
+    <div class="cards">
+        <div class="card">
+            ⭐⭐⭐⭐⭐
+            <p>ابني حب البرمجة جدًا وطريقة الشرح بسيطة وممتعة.</p>
+            <strong>— ولي أمر</strong>
+        </div>
+
+        <div class="card">
+            ⭐⭐⭐⭐⭐
+            <p>منصة محترمة وتواصل ممتاز.</p>
+            <strong>— أم طفل 9 سنوات</strong>
+        </div>
+    </div>
+</section>
+
 
 <section class="section">
     <h2>لماذا CodeUp؟</h2>
@@ -116,6 +198,7 @@ footer {
         <div class="card">🌐 Web Development</div>
         <div class="card">📱 Mobile Apps</div>
         <div class="card">🧠 التفكير المنطقي</div>
+        <section class="section fade-up">
     </div>
 
     <a href="https://wa.me/201XXXXXXXXX" target="_blank">
